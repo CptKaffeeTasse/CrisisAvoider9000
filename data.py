@@ -11,11 +11,11 @@ def prices():
 
 def risks(bundesland):
     if bundesland == "Freistaat Bayern" or bundesland == "Niedersachsen":
-        base = random.randrange(14, 23)
+        base = random.randrange(5, 19)
         prev = base + random.randrange(-1, 9)
         prev2 = prev + random.randrange(1, 8)
     else:
-        base = random.randrange(9, 19)
+        base = random.randrange(5, 12)
         prev = base + random.randrange(-4, 9)
         prev2 = prev + random.randrange(-2, 8)
     return [base / 100, min(max(prev, 0), 100) / 100, min(max(prev2, 0), 100) / 100]
